@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"mycompany.com/test/learngolang/pkg/morestrings"
 	// mytype "./myType"
 )
 
@@ -12,13 +13,19 @@ func main() {
 	printDate()
 
 	fmt.Println("uuid: ", uuid.New().String())
-}
 
-func testRecangle() {
-	// r := mytype.Rectangle{width: 3, height: 4}
-	// fmt.Println(r)
+	fmt.Println("fact(3): ", fact(3))
+
+	fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
 }
 
 func printDate() {
 	fmt.Printf("Hello world!!!\n\t\t%s\n", time.Now())
+}
+
+func fact(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * fact(n-1)
 }
