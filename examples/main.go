@@ -4,28 +4,38 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/google/uuid"
-	"mycompany.com/test/learngolang/pkg/morestrings"
 	// mytype "./myType"
+
+	"learngolang/examples/basic"
+	"learngolang/pkg/mytype"
 )
 
 func main() {
-	printDate()
+	// printDate()
 
-	fmt.Println("uuid: ", uuid.New().String())
+	// fmt.Println("uuid: ", uuid.New().String())
 
-	fmt.Println("fact(3): ", fact(3))
+	// goobject.Test()
 
-	fmt.Println(morestrings.ReverseRunes("!oG ,olleH"))
+	// testRecangle()
+	testBasic()
+
+}
+
+func testBasic() {
+	// basic.PrintHello()
+	basic.PrintPointer()
+}
+
+func testRecangle() {
+	fmt.Println("This is testRecangle......")
+
+	r := mytype.Rectangle{Width: 3, Height: 4}
+	fmt.Println(r)
+
+	// mytype.Test()
 }
 
 func printDate() {
 	fmt.Printf("Hello world!!!\n\t\t%s\n", time.Now())
-}
-
-func fact(n int) int {
-	if n == 0 {
-		return 1
-	}
-	return n * fact(n-1)
 }

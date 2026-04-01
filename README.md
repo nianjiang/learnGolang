@@ -20,6 +20,8 @@ go mod tidy
 
 ## Reference
 
+https://gobyexample.com/
+
 https://awesome-go.com/
 
 https://gin-gonic.com/docs/quickstart/
